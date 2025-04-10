@@ -31,7 +31,7 @@ services:
 
   # cAdvisor pour surveiller les conteneurs Docker
   cadvisor:
-    image: google/cadvisor:latest
+    image: gcr.io/cadvisor/cadvisor:latest
     container_name: monitoring_cadvisor
     restart: unless-stopped
     volumes:
