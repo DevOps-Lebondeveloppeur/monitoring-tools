@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       # Fichier de configuration Prometheus
-      - ./data/prometheus/config:/etc/prometheus/
+      - ./:/etc/prometheus/
       # Données persistées de Prometheus
       - ./data/prometheus/data:/prometheus
     command:
