@@ -52,7 +52,7 @@ services:
     links:
       - prometheus:prometheus                              # Connexion à Prometheus
     volumes:
-      - ./data/grafana:/var/lib/grafana                    # Persistance des dashboards
+      - grafana_data:/var/lib/grafana                    # Persistance des dashboards
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=MYPASSWORT              # Mot de passe admin Grafana
       - GF_USERS_ALLOW_SIGN_UP=false                       # Empêcher la création de comptes utilisateurs
@@ -66,3 +66,4 @@ services:
 
 volumes:
   prometheus_data:
+  grafana_data:
