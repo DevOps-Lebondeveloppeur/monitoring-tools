@@ -12,7 +12,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'   # Chemin du fichier de config
       - '--storage.local.path=/prometheus'               # Stockage des données
-      - '--alertmanager.url=http://alertmanager:9093'    # (optionnel) URL de l’alertmanager
+      #- '--alertmanager.url=http://alertmanager:9093'    # (optionnel) URL de l’alertmanager
     expose:
       - 9090                                              # Port exposé en interne (utile pour d'autres services Docker)
     ports:
