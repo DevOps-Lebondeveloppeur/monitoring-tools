@@ -8,7 +8,7 @@ services:
       # Fichier de configuration Prometheus
       - ./:/etc/prometheus/
       # Données persistées de Prometheus
-      - ./data/prometheus/data:/prometheus
+      - prometheus_data:/prometheus
   #  command:
      # - '--config.file=/etc/prometheus/prometheus.yml'   # Chemin du fichier de config
       #- '--storage.local.path=/prometheus'               # Stockage des données
@@ -62,3 +62,7 @@ services:
       - GF_SMTP_USER=myadrress@gmail.com                   # Adresse e-mail d'envoi
       - GF_SMTP_PASSWORD=mypassword                        # Mot de passe de l’adresse
       - GF_SMTP_FROM_ADDRESS=myaddress@gmail.com           # Adresse e-mail de l'expéditeur
+
+
+volumes:
+  prometheus_data:
