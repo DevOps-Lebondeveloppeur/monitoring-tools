@@ -40,6 +40,8 @@
     image: grafana/grafana:latest
     container_name: monitoring_grafana
     restart: unless-stopped
+    ports:
+      - "3006:3000"
     links:
       - prometheus:prometheus
     volumes:
