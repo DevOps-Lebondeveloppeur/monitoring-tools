@@ -54,14 +54,14 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana                    # Persistance des dashboards
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=MYPASSWORT              # Mot de passe admin Grafana
+      - GF_SECURITY_ADMIN_PASSWORD=admin              # Mot de passe admin Grafana
       - GF_USERS_ALLOW_SIGN_UP=false                       # Empêcher la création de comptes utilisateurs
-      - GF_SERVER_DOMAIN=myrul.com                         # Domaine personnalisé Grafana (optionnel)
-      - GF_SMTP_ENABLED=true                               # Activation SMTP pour notifications
-      - GF_SMTP_HOST=smtp.gmail.com:587                    # Hôte SMTP (ex. Gmail)
-      - GF_SMTP_USER=myadrress@gmail.com                   # Adresse e-mail d'envoi
-      - GF_SMTP_PASSWORD=mypassword                        # Mot de passe de l’adresse
-      - GF_SMTP_FROM_ADDRESS=myaddress@gmail.com           # Adresse e-mail de l'expéditeur
+     # - GF_SERVER_DOMAIN=myrul.com                         # Domaine personnalisé Grafana (optionnel)
+      #- GF_SMTP_ENABLED=true                               # Activation SMTP pour notifications
+    #  - GF_SMTP_HOST=smtp.gmail.com:587                    # Hôte SMTP (ex. Gmail)
+    #  - GF_SMTP_USER=myadrress@gmail.com                   # Adresse e-mail d'envoi
+    #  - GF_SMTP_PASSWORD=mypassword                        # Mot de passe de l’adresse
+    #  - GF_SMTP_FROM_ADDRESS=myaddress@gmail.com           # Adresse e-mail de l'expéditeur
 
 
 volumes:
